@@ -24,10 +24,7 @@ public class SplashActivity extends BaseActivity {
 
     private void launchNewActivity() {
         boolean isFirst = (boolean) SPUtils.get(this, "isFirst", true);
-
-        ActivityUtils.goOtherActivityFinish(c);
-
-
+        ActivityUtils.goOtherActivityFinish(context, isFirst ? GuideActivity.class : MainActivity.class);
     }
 
 
