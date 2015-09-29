@@ -15,42 +15,62 @@
         android:scaleType="center"
         android:src="@drawable/guide_convertnext"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:layout_width="96dp"
+        android:layout_height="16dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="35dp"
         android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:layout_margin="3dp"
-            android:background="@drawable/shape_circle_border"/>
 
-        <ImageView
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:layout_margin="3dp"
-            android:background="@drawable/shape_circle_border"/>
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:layout_margin="3dp"
-            android:background="@drawable/shape_circle_border"/>
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/shape_circle_border"/>
 
-        <ImageView
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:layout_margin="3dp"
-            android:background="@drawable/shape_circle_border"/>
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/shape_circle_border"/>
 
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/shape_circle_border"/>
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/shape_circle_border"/>
+    <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/shape_circle_border"/>
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/shape_circle_border"/>
+        </LinearLayout>
         <ImageView
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:layout_margin="3dp"
-            android:background="@drawable/shape_circle_border"/>
-    </LinearLayout>
+            android:id="@+id/iv_indicator"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/shape_circle"/>
+
+    </RelativeLayout>
 </RelativeLayout>
