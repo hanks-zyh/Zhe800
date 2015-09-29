@@ -51,7 +51,7 @@ public class GuideActivity extends BaseActivity {
 
         final ImageView iv_indicator = (ImageView) findViewById(R.id.iv_indicator);
         ViewPager vp_guide = (ViewPager) findViewById(R.id.vp_guide);
-        vp_guide.setAdapter(new GuideAdapater());
+        vp_guide.setAdapter(new GuideAdapter());
         vp_guide.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
             @Override
@@ -68,15 +68,15 @@ public class GuideActivity extends BaseActivity {
                     layoutParams.leftMargin = (int) (dp2px(20) + positionOffset * viewSpace);
                 } else if (mCurrentIndex == 2 && position == 1) { // 1 -> 0
                     layoutParams.leftMargin = (int) (dp2px(36) + (positionOffset - 1) * viewSpace);
-                }else if (mCurrentIndex == 2 && position == 2) { // 0->1
+                } else if (mCurrentIndex == 2 && position == 2) { // 0->1
                     layoutParams.leftMargin = (int) (dp2px(36) + positionOffset * viewSpace);
                 } else if (mCurrentIndex == 3 && position == 2) { // 1 -> 0
                     layoutParams.leftMargin = (int) (dp2px(52) + (positionOffset - 1) * viewSpace);
-                }else if (mCurrentIndex == 3 && position == 3) { // 0->1
+                } else if (mCurrentIndex == 3 && position == 3) { // 0->1
                     layoutParams.leftMargin = (int) (dp2px(52) + positionOffset * viewSpace);
                 } else if (mCurrentIndex == 4 && position == 3) { // 1 -> 0
                     layoutParams.leftMargin = (int) (dp2px(68) + (positionOffset - 1) * viewSpace);
-                }else if (mCurrentIndex == 4 && position == 4) { // 0->1
+                } else if (mCurrentIndex == 4 && position == 4) { // 0->1
                     layoutParams.leftMargin = (int) (dp2px(68) + positionOffset * viewSpace);
                 } else if (mCurrentIndex == 5 && position == 4) { // 1 -> 0
                     layoutParams.leftMargin = (int) (dp2px(84.5f) + (positionOffset - 1) * viewSpace);
@@ -102,8 +102,7 @@ public class GuideActivity extends BaseActivity {
         return (int) (dpVaule * (scale / 160));
     }
 
-
-    class GuideAdapater extends PagerAdapter {
+    class GuideAdapter extends PagerAdapter {
 
         @Override
         public int getCount() {
