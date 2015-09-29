@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:text="@string/choose_rolo_text1"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp"
+                android:text="@string/choose_rolo_text2"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-12dp"
+            android:background="@drawable/shape_rectangle"
+            android:rotation="45"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="110dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/selector_role_girl"/>
+
+            <ImageButton
+                android:layout_width="110dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/selector_role_lama"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:src="@drawable/selector_role_boy"/>
+
+        <CheckBox
+            android:paddingTop="2dp"
+            android:button="@drawable/selector_checkbox_student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="@string/choose_rolo_text3"/>
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_rectangle_corner"
+            android:text="@string/choose_rolo_text4"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</ScrollView>

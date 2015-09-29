@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.hanks.zhe800.R;
+import com.hanks.zhe800.util.ActivityUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -100,6 +101,11 @@ public class GuideActivity extends BaseActivity {
     public int dp2px(float dpVaule) {
         final float scale = getResources().getDisplayMetrics().densityDpi;
         return (int) (dpVaule * (scale / 160));
+    }
+
+    public void finishGuide(View view){
+
+        ActivityUtils.goOtherActivityFinish(context,ChooseRoleActivity.class);
     }
 
     class GuideAdapter extends PagerAdapter {

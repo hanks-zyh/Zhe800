@@ -13,6 +13,8 @@
         android:src="@drawable/bg_formguide_new_5"/>
 
     <ImageView
+        android:clickable="true"
+        android:onClick="finishGuide"
         android:id="@+id/iv_click"
         android:layout_width="150dp"
         android:layout_height="80dp"

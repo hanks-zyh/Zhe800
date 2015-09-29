@@ -13,6 +13,8 @@
         android:layout_height="60dp"
         android:layout_alignParentRight="true"
         android:scaleType="center"
+        android:clickable="true"
+        android:onClick="finishGuide"
         android:src="@drawable/guide_convertnext"/>
 
     <RelativeLayout
@@ -25,9 +27,9 @@
 
 
         <LinearLayout
-            android:layout_centerVertical="true"
             android:layout_width="match_parent"
             android:layout_height="16dp"
+            android:layout_centerVertical="true"
             android:orientation="horizontal">
 
             <ImageView
@@ -53,17 +55,20 @@
                 android:layout_height="10dp"
                 android:layout_margin="3dp"
                 android:background="@drawable/shape_circle_border"/>
-    <ImageView
+
+            <ImageView
                 android:layout_width="10dp"
                 android:layout_height="10dp"
                 android:layout_margin="3dp"
                 android:background="@drawable/shape_circle_border"/>
+
             <ImageView
                 android:layout_width="10dp"
                 android:layout_height="10dp"
                 android:layout_margin="3dp"
                 android:background="@drawable/shape_circle_border"/>
         </LinearLayout>
+
         <ImageView
             android:id="@+id/iv_indicator"
             android:layout_width="8dp"

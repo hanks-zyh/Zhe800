@@ -18,6 +18,7 @@ public class BaseActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
+        setFullscreen();
     }
 
     public void setFullscreen() {

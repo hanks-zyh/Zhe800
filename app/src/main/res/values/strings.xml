@@ -3,4 +3,8 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="choose_rolo_text1">您的身份是？</string>
+    <string name="choose_rolo_text2">只为给你私人定制更合适的商品</string>
+    <string name="choose_rolo_text3">我是学生</string>
+    <string name="choose_rolo_text4">确定</string>
 </resources>
