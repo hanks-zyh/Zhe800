@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fm_content"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+        <RadioButton
+            style="@style/RadioButtonTag"
+            android:text="@string/main_tag_home"
+            android:drawableTop="@drawable/selector_tag_jinri"/>
+        <RadioButton
+            style="@style/RadioButtonTag"
+            android:text="@string/main_tag_category"
+            android:drawableTop="@drawable/selector_tag_category"/>
+        <RadioButton
+            style="@style/RadioButtonTag"
+            android:text="@string/main_tag_brand"
+            android:drawableTop="@drawable/selector_tag_brand"/>
+        <RadioButton
+            style="@style/RadioButtonTag"
+            android:text="@string/main_tag_jifen"
+            android:drawableTop="@drawable/selector_tag_jifen"/>
+        <RadioButton
+            style="@style/RadioButtonTag"
+            android:text="@string/main_tag_user"
+            android:drawableTop="@drawable/selector_tag_user"/>
+    </RadioGroup>
+</LinearLayout>

@@ -7,4 +7,9 @@
     <string name="choose_rolo_text2">只为给你私人定制更合适的商品</string>
     <string name="choose_rolo_text3">我是学生</string>
     <string name="choose_rolo_text4">确定</string>
+    <string name="main_tag_home">首页</string>
+    <string name="main_tag_user">个人中心</string>
+    <string name="main_tag_jifen">积分商城</string>
+    <string name="main_tag_brand">品牌团</string>
+    <string name="main_tag_category">分类</string>
 </resources>

@@ -4,4 +4,5 @@
     <color name="pink">#FFC8CB</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="red">#EF4949</color>
+    <color name="text_normal">#818181</color>
 </resources>
