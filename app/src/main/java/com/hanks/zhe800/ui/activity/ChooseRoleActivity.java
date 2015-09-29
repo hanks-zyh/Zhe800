@@ -33,6 +33,7 @@ public class ChooseRoleActivity extends BaseActivity {
         ib_boy.setOnClickListener(clickListener);
         ib_lama.setOnClickListener(clickListener);
         ib_girl.setOnClickListener(clickListener);
+        ib_girl.setSelected(true);
     }
 
     // End Of Content View Elements
