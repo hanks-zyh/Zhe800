@@ -50,6 +50,7 @@
             android:orientation="horizontal">
 
             <ImageButton
+                android:id="@+id/ib_girl"
                 android:layout_width="110dp"
                 android:layout_height="150dp"
                 android:layout_weight="1"
@@ -57,6 +58,7 @@
                 android:src="@drawable/selector_role_girl"/>
 
             <ImageButton
+                android:id="@+id/ib_lama"
                 android:layout_width="110dp"
                 android:layout_height="150dp"
                 android:layout_weight="1"
@@ -65,6 +67,7 @@
         </LinearLayout>
 
         <ImageButton
+            android:id="@+id/ib_boy"
             android:layout_width="110dp"
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
@@ -72,12 +75,13 @@
             android:src="@drawable/selector_role_boy"/>
 
         <CheckBox
-            android:paddingTop="2dp"
-            android:button="@drawable/selector_checkbox_student"
+            android:id="@+id/cb_student"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
+            android:button="@drawable/selector_checkbox_student"
+            android:paddingTop="2dp"
             android:text="@string/choose_rolo_text3"/>
 
         <Button
@@ -86,6 +90,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/shape_rectangle_corner"
+            android:onClick="finishChoose"
             android:text="@string/choose_rolo_text4"
             android:textColor="@color/white"
             android:textSize="18sp"/>

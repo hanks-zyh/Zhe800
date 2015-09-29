@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.hanks.zhe800.R;
+import com.hanks.zhe800.constant.Constant;
 import com.hanks.zhe800.util.ActivityUtils;
 import com.hanks.zhe800.util.SPUtils;
 
@@ -23,7 +24,7 @@ public class SplashActivity extends BaseActivity {
     }
 
     private void launchNewActivity() {
-        boolean isFirst = (boolean) SPUtils.get(this, "isFirst", true);
+        boolean isFirst = (boolean) SPUtils.get(this, Constant.AppConfig.IS_FIRST, true);
         ActivityUtils.goOtherActivityFinish(context, isFirst ? GuideActivity.class : MainActivity.class);
     }
 
