@@ -4,12 +4,10 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.FrameLayout;
 
 import com.hanks.zhe800.R;
 import com.hanks.zhe800.ui.fragment.JinriFragment;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
@@ -17,10 +15,7 @@ import butterknife.ButterKnife;
  */
 public class MainActivity extends BaseActivity {
 
-    @Bind(R.id.fm_main)
-    FrameLayout fm_main;
     private FragmentManager fragmentManager;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

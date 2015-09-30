@@ -2,7 +2,6 @@ package com.hanks.zhe800.ui.activity;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -18,7 +17,6 @@ public class BaseActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
-        setFullscreen();
     }
 
     public void setFullscreen() {
@@ -32,7 +30,4 @@ public class BaseActivity extends Activity {
         decorView.setSystemUiVisibility(uiOptions);
     }
 
-    public void launchNewActivity(Class<?> clz){
-        startActivity(new Intent(this,clz));
-    }
 }

@@ -27,4 +27,9 @@ public class JinriPageAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return fragmentList.size();
     }
+ private String tabs[] = new String[] {"全部", "数码家电", "美妆配饰", "可口美食", "中老年", "文娱运动" , "儿童天地", "文娱运动" , "儿童天地", "文娱运动" , "儿童天地"};
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return tabs[position];
+    }
 }

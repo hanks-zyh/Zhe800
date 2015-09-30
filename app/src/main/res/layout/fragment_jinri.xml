@@ -2,16 +2,103 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/white"
               android:orientation="vertical">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/app_red"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/app_brand_logo_defalut"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="6dp"
+            android:layout_toLeftOf="@+id/iv_car"
+            android:layout_toRightOf="@+id/iv_logo"
+            android:background="@color/app_red_black"
+            android:drawableLeft="@drawable/ic_search_new"
+            android:drawablePadding="4dp"
+            android:hint="在34842件商品中搜索"
+            android:paddingLeft="12dp"
+            android:textColorHint="@color/app_hint"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/iv_car"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/home_cart"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <com.hanks.zhe800.ui.view.tabs.SlidingTabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/iv_arrow"/>
+
+        <TextView
+            android:id="@+id/tv_all"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/tag_jinri_all"/>
+
+        <include
+            android:id="@+id/line"
+            layout="@layout/line_v"
+            android:layout_width="@dimen/line_width"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/tv_all"/>
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/bg_category_change_category_arrow"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/iv_arrow"
+            android:src="@drawable/bg_more_right"/>
+
+        <ImageView
+
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/line"
+            android:src="@drawable/bg_more_left"/>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/line_h"
+        />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_jinri"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

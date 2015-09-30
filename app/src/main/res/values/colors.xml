@@ -5,4 +5,11 @@
     <color name="transparent">#00FFFFFF</color>
     <color name="red">#EF4949</color>
     <color name="text_normal">#818181</color>
+    <color name="app_red">#E20C24</color>
+    <color name="app_red_dark">#A4010B</color>
+    <color name="app_red_black">#CF010B</color>
+    <color name="app_hint">#66FFFFFF</color>
+    <color name="line_grey">#66666666</color>
+    <color name="text_black">#5D646E</color>
+
 </resources>

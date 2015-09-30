@@ -9,11 +9,13 @@ import android.view.ViewGroup;
 
 import com.hanks.zhe800.R;
 import com.hanks.zhe800.ui.adapter.JinriPageAdapter;
+import com.hanks.zhe800.ui.view.tabs.SlidingTabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
+import butterknife.BindColor;
 import butterknife.ButterKnife;
 
 /**
@@ -23,6 +25,13 @@ public class JinriFragment extends BaseFragment {
 
     @Bind(R.id.vp_jinri)
     ViewPager vp_jinri;
+    @Bind(R.id.tabs)
+    SlidingTabLayout tabs;
+
+
+    @BindColor(R.color.app_red)
+    int app_red;
+
     private List<Fragment> fragmentList = new ArrayList<>();
     private JinriPageAdapter adapter;
 
@@ -48,8 +57,21 @@ public class JinriFragment extends BaseFragment {
         fragmentList.add(JinriChildFragment.newInstance());
         fragmentList.add(JinriChildFragment.newInstance());
         fragmentList.add(JinriChildFragment.newInstance());
+        fragmentList.add(JinriChildFragment.newInstance());
+        fragmentList.add(JinriChildFragment.newInstance());
+        fragmentList.add(JinriChildFragment.newInstance());
+        fragmentList.add(JinriChildFragment.newInstance());
         adapter = new JinriPageAdapter(fragmentList, getFragmentManager());
         vp_jinri.setAdapter(adapter);
+        initSlidingTabLayout();
+    }
+
+    private void initSlidingTabLayout() {
+        tabs = (SlidingTabLayout) getView().findViewById(R.id.tabs);
+        tabs.setCustomTabView(R.layout.custom_tab, 0);        // Set custom tab layout
+        // mTabs.setDistributeEvenly(true);  // Center the tabs in the layout
+        tabs.setSelectedIndicatorColors(app_red);    // Customize tab color
+        tabs.setViewPager(vp_jinri);
     }
 
     @Override
