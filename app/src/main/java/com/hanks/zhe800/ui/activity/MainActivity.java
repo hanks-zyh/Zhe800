@@ -1,10 +1,13 @@
 package com.hanks.zhe800.ui.activity;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.FrameLayout;
 
 import com.hanks.zhe800.R;
+import com.hanks.zhe800.ui.fragment.JinriFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -14,8 +17,9 @@ import butterknife.ButterKnife;
  */
 public class MainActivity extends BaseActivity {
 
-    @Bind(R.id.vp_main)
-    ViewPager vp_main;
+    @Bind(R.id.fm_main)
+    FrameLayout fm_main;
+    private FragmentManager fragmentManager;
 
 
     @Override
@@ -23,11 +27,12 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        initViewPager();
-    }
 
-    private void initViewPager() {
-//        vp_main.setAdapter();
+        fragmentManager = getFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.add(R.id.fm_main, JinriFragment.newInstance());
+        transaction.commit();
+
     }
 
     public void onTagClick(View view) {
