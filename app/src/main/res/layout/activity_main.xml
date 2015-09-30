@@ -4,35 +4,50 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <FrameLayout
-        android:id="@+id/fm_content"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_main"
         android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:orientation="horizontal">
+
         <RadioButton
+            android:id="@+id/rb_jinri"
+            android:onClick="onTagClick"
             style="@style/RadioButtonTag"
-            android:text="@string/main_tag_home"
-            android:drawableTop="@drawable/selector_tag_jinri"/>
+            android:drawableTop="@drawable/selector_tag_jinri"
+            android:text="@string/main_tag_home"/>
+
         <RadioButton
+            android:id="@+id/rb_category"
             style="@style/RadioButtonTag"
-            android:text="@string/main_tag_category"
-            android:drawableTop="@drawable/selector_tag_category"/>
+            android:drawableTop="@drawable/selector_tag_category"
+            android:onClick="onTagClick"
+            android:text="@string/main_tag_category"/>
+
         <RadioButton
+            android:id="@+id/rb_brand"
             style="@style/RadioButtonTag"
-            android:text="@string/main_tag_brand"
-            android:drawableTop="@drawable/selector_tag_brand"/>
+            android:drawableTop="@drawable/selector_tag_brand"
+            android:onClick="onTagClick"
+            android:text="@string/main_tag_brand"/>
+
         <RadioButton
+            android:id="@+id/rb_jifen"
             style="@style/RadioButtonTag"
-            android:text="@string/main_tag_jifen"
-            android:drawableTop="@drawable/selector_tag_jifen"/>
+            android:onClick="onTagClick"
+            android:drawableTop="@drawable/selector_tag_jifen"
+            android:text="@string/main_tag_jifen"/>
+
         <RadioButton
+            android:onClick="onTagClick"
+            android:id="@+id/rb_user"
             style="@style/RadioButtonTag"
-            android:text="@string/main_tag_user"
-            android:drawableTop="@drawable/selector_tag_user"/>
+            android:drawableTop="@drawable/selector_tag_user"
+            android:text="@string/main_tag_user"/>
     </RadioGroup>
 </LinearLayout>
