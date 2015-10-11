@@ -33,9 +33,9 @@ import butterknife.Bind;
 public class JinriChildFragment extends BaseFragment {
 
     @Bind(R.id.rv)
-    private RecyclerView rv;
+    RecyclerView rv;
     @Bind(R.id.refresh_layout)
-    private SwipeRefreshLayout refresh_layout;
+    SwipeRefreshLayout refresh_layout;
 
 
     private JinriListAdapter adapter;
