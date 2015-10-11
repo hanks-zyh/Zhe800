@@ -1,3 +1,16 @@
+/*
+ * Copyright 2015 Hanks All rights reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.hanks.zhe800.ui.adapter;
 
 import android.app.Fragment;
@@ -12,6 +25,7 @@ import java.util.List;
 public class JinriPageAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> fragmentList;
+    private String tabs[] = new String[]{"全  部", "数码家电", "美妆配饰", "可口美食", "中老年", "文娱运动", "儿童天地", "文娱运动", "儿童天地", "文娱运动", "儿童天地"};
 
     public JinriPageAdapter(List<Fragment> list, FragmentManager fm) {
         super(fm);
@@ -27,7 +41,7 @@ public class JinriPageAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return fragmentList.size();
     }
- private String tabs[] = new String[] {"全部", "数码家电", "美妆配饰", "可口美食", "中老年", "文娱运动" , "儿童天地", "文娱运动" , "儿童天地", "文娱运动" , "儿童天地"};
+
     @Override
     public CharSequence getPageTitle(int position) {
         return tabs[position];
