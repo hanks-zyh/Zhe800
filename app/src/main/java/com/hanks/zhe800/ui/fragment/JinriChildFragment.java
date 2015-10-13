@@ -44,6 +44,8 @@ public class JinriChildFragment extends BaseFragment {
     public static JinriChildFragment newInstance() {
         JinriChildFragment jinriChildFragment = new JinriChildFragment();
         return jinriChildFragment;
+
+
     }
 
     @Nullable
