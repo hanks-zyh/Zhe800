@@ -57,8 +57,9 @@ public class JinriChildFragment extends BaseFragment {
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        rv.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        rv = (RecyclerView) view.findViewById(R.id.rv);
 
+        rv.setLayoutManager(new LinearLayoutManager(view.getContext()));
         adapter = new JinriListAdapter();
         rv.setAdapter(adapter);
     }
