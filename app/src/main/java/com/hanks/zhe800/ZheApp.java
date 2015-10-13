@@ -19,8 +19,17 @@ import android.app.Application;
  * Created by hanks on 15-10-13.
  */
 public class ZheApp extends Application {
+
+    public static ZheApp app;
+
+    public static ZheApp getInstace() {
+        return app;
+    }
+
+
     @Override
     public void onCreate() {
         super.onCreate();
+        app = this;
     }
 }

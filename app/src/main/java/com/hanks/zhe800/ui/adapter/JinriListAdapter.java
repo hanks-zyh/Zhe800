@@ -20,8 +20,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.hanks.zhe800.R;
+import com.hanks.zhe800.util.PixelUtils;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -42,6 +44,7 @@ public class JinriListAdapter extends RecyclerView.Adapter {
     private static final int TYPE_LIST_ITEM = 0x505;
 
 
+
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -50,7 +53,7 @@ public class JinriListAdapter extends RecyclerView.Adapter {
             case TYPE_BANNER:
                 return new BannerViewHolder(xmlToView(parent, R.layout.layout_banner));
             case TYPE_GRID:
-                return new GridViewHolder(xmlToView(parent, R.layout.layout_guide));
+                return new GridViewHolder(xmlToView(parent, R.layout.activity_splash));
             case TYPE_JINRI:
                 return new JinriViewHolder(xmlToView(parent, R.layout.layout_guide));
             case TYPE_BRAND:
@@ -73,14 +76,16 @@ public class JinriListAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (position == 0) {
             List<String> list = new ArrayList<>();
-            list.add("");
+            list.add("http://z11.tuanimg.com/imagev2/wxyy/720x250.2ffa58f1bc8cb54ac1c148adcae39c97.jpg");
+            list.add("http://z11.tuanimg.com/imagev2/wxyy/720x250.d37de04906c47613b02b21910b5dc24f.jpg");
+            list.add("http://z11.tuanimg.com/imagev2/wxyy/720x250.dafec29ab9f9e161a2521ff2d770cd4f.jpg");
             ((BannerViewHolder) holder).setImageList(list);
         }
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return 10;
     }
 
 
@@ -109,18 +114,20 @@ public class JinriListAdapter extends RecyclerView.Adapter {
 
         public BannerViewHolder(View itemView) {
             super(itemView);
+            imageList = new ArrayList<>();
             CircleIndicator customIndicator = (CircleIndicator) itemView.findViewById(R.id.indicator);
             adapter = new BannerAdapter();
             ViewPager viewpager = (ViewPager) itemView.findViewById(R.id.vp_banner);
+            viewpager.setLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, PixelUtils.dp2px(140)));
             viewpager.setAdapter(adapter);
-            customIndicator.setViewPager(viewpager);
-            imageList = new ArrayList<>();
+//            customIndicator.setViewPager(viewpager);
         }
 
         private void setImageList(List<String> newList) {
             imageList.clear();
             for (String url : newList) {
                 ImageView imageView = new ImageView(itemView.getContext());
+                imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 imageView.setTag(url);
                 imageList.add(imageView);
             }
